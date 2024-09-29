@@ -70,6 +70,7 @@ export default function CarListing() {
                 {/* Moved specifications to the left-side below images */}
                 <div className="specifications">
                     <h2>Specifications</h2>
+                    <hr /> {/* Added dividing line below the header */}
                     <ul>
                         <li>Engine: 4.0L V8</li>
                         <li>Power: 496 hp</li>
