@@ -6,11 +6,11 @@ export default function CarListing() {
 
     // Replace these URLs with actual car image URLs
     const images = [
-        "https://example.com/image1.jpg",
-        "https://example.com/image2.jpg",
-        "https://example.com/image3.jpg",
-        "https://example.com/image4.jpg",
-        "https://example.com/image5.jpg"
+        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg",
+        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg",
+        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg",
+        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg",
+        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg"
     ];
 
     const nextSlide = () => {
