@@ -97,6 +97,12 @@
     font-size: 1.2rem;
 }
 
+.specifications h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
 /* Right-side content with scroll reveal and card behavior */
 .card {
     background-color: #1c1c1c;
@@ -121,7 +127,7 @@
 
 .right-side h2 {
     font-size: 1.8rem;
-    font-weight: lighter;
+    font-weight: 300;
     margin-bottom: 20px;
     color: rgb(242, 242, 242);
 }
