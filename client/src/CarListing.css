@@ -115,12 +115,13 @@
 
 .right-side h1 {
     font-size: 5rem;
-    font-weight: bold;
+    font-weight: lighter;
     color: rgb(255, 255, 255);
 }
 
 .right-side h2 {
     font-size: 1.8rem;
+    font-weight: lighter;
     margin-bottom: 20px;
     color: rgb(242, 242, 242);
 }
@@ -153,20 +154,34 @@
         flex-direction: column;
     }
 
-    .left-side,
+    .left-side {
+        max-width: 100%;
+        order: 1;
+        /* Ensures images remain at the top */
+    }
+
     .right-side {
         max-width: 100%;
+        order: 2;
+        /* Ensures title, description, and contact info come below the images */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .specifications {
+        order: 3;
+        /* Ensures specifications come after title and description */
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #ccc;
+        /* Optional: adds a separator for visual distinction */
     }
 
     .tiled-images {
         flex-direction: row;
         flex-wrap: wrap;
-        /* Ensuring grid resizes for multiple rows */
         justify-content: space-around;
-    }
-
-    .right-side {
-        gap: 20px;
     }
 
     .card {

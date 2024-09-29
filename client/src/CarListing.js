@@ -82,7 +82,15 @@ export default function CarListing() {
             <div className="right-side">
                 <h1>2024 Mercedes S-Class</h1>
                 <h2>Sydney, Australia</h2>
-                <p className="description">The 2024 Merceds S-Class is a luxury sedan that combines cutting-edge technology with elegant design.</p>
+                <p className="description">The 2024 Merceds S-Class is a luxury sedan that combines cutting-edge technology with elegant design.
+                    It features a 4.0L V8 engine that produces 496 hp and can accelerate from 0-60 mph in just 3.7 seconds. The interior is
+                    equipped with the latest MBUX infotainment system and a 12.8-inch OLED touchscreen display. The S-Class also offers
+                    advanced safety features such as adaptive cruise control and lane-keeping
+                    assist.
+                </p>
+                <p className="description">
+                    The 2024 Mercedes S-Class is available in a range of colors and trims to suit your style. Contact us today to schedule a test drive!
+                </p>
                 <p className="description2">Starting at $110,000</p>
 
                 <div className="contact-info">
