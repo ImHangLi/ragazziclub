@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CarListing.css"; // Add a new CSS file for specific styles
 
 export default function CarListing() {
@@ -24,6 +24,11 @@ export default function CarListing() {
     const selectSlide = (index) => {
         setActiveSlide(index);
     };
+
+    // Reinitialize tiles when returning from another page
+    useEffect(() => {
+        setActiveSlide(0);  // Reset active slide on component mount
+    }, []);
 
     return (
         <main className="listing-container">
@@ -61,12 +66,8 @@ export default function CarListing() {
                         />
                     ))}
                 </div>
-            </div>
 
-            <div className="right-side">
-                <h1>2024 Mercedes S-Class</h1>
-                <p className="description">Luxury redefined. The ultimate driving experience.</p>
-
+                {/* Moved specifications to the left-side below images */}
                 <div className="specifications">
                     <h2>Specifications</h2>
                     <ul>
@@ -76,11 +77,18 @@ export default function CarListing() {
                         <li>0-60 mph: 3.7 seconds</li>
                     </ul>
                 </div>
+            </div>
+
+            <div className="right-side">
+                <h1>2024 Mercedes S-Class</h1>
+                <h2>Sydney, Australia</h2>
+                <p className="description">The 2024 Merceds S-Class is a luxury sedan that combines cutting-edge technology with elegant design.</p>
+                <p className="description2">Starting at $110,000</p>
 
                 <div className="contact-info">
                     <h2>Contact Us</h2>
                     <p><span role="img" aria-label="phone">📞</span> +1 (800) 123-4567</p>
-                    <p><span role="img" aria-label="email">✉️</span> contact@luxurycars.com</p>
+                    <p><span role="img" aria-label="email">✉️</span> contact@RAGAZZICLUB.com</p>
                 </div>
             </div>
         </main>

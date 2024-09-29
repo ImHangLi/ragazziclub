@@ -1,9 +1,11 @@
 /* General layout for the listing */
 .listing-container {
     display: flex;
-    padding: 40px;
+    padding: 0px;
     gap: 40px;
     flex-wrap: wrap;
+    font-family: "Inter", sans-serif;
+    /* Inter font applied */
 }
 
 .left-side {
@@ -59,6 +61,7 @@
 /* Tiled images below the main slideshow */
 .tiled-images {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
 }
@@ -79,6 +82,21 @@
     border: 3px solid #717171;
 }
 
+/* Specifications section now on the left side */
+.specifications {
+    margin-top: 30px;
+}
+
+.specifications ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.specifications ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
 /* Right-side content with scroll reveal and card behavior */
 .card {
     background-color: #1c1c1c;
@@ -96,30 +114,22 @@
 }
 
 .right-side h1 {
-    font-size: 2.5rem;
+    font-size: 5rem;
     font-weight: bold;
-    color: gold;
+    color: rgb(255, 255, 255);
 }
 
 .right-side h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
+    color: rgb(242, 242, 242);
 }
 
 .description {
     font-size: 1.2rem;
 }
 
-.specifications ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.specifications ul li {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
+/* Contact section styles */
 .contact-info p {
     font-size: 1.1rem;
     margin: 10px 0;
@@ -146,6 +156,13 @@
     .left-side,
     .right-side {
         max-width: 100%;
+    }
+
+    .tiled-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* Ensuring grid resizes for multiple rows */
+        justify-content: space-around;
     }
 
     .right-side {

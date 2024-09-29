@@ -16,7 +16,7 @@ main {
 header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   padding: 40px;
   font-weight: bolder;
   align-items: center;
