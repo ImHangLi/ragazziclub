@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';  // Import shared styles
+import './App.css'; // Reuse the styles from App.css
 
 export default function CarListing() {
     const [activeSlide, setActiveSlide] = useState(0);
