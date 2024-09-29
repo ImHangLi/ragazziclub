@@ -6,11 +6,11 @@ export default function CarListing() {
 
     // Replace these URLs with actual car image URLs
     const images = [
-        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg",
-        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg",
-        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg",
-        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg",
-        "https://static.wixstatic.com/media/6a87ff_e14817409b2e4aff97fac1328ebf7e0b~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_6530.jpg"
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-109-1642184016.jpg?crop=0.647xw:0.548xh;0.116xw,0.313xh&resize=2048:*",
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-102-1642184016.jpg?crop=1xw:1xh;center,top&resize=980:*",
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-101-1642184014.jpg?crop=1xw:1xh;center,top&resize=980:*",
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-103-1642184013.jpg?crop=1xw:1xh;center,top&resize=980:*",
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-104-1642184013.jpg?crop=1xw:1xh;center,top&resize=980:*"
     ];
 
     const nextSlide = () => {
