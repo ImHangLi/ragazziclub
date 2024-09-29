@@ -1,0 +1,135 @@
+/* General layout styling */
+.listing-container {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Left-side styles */
+.left-side {
+    flex: 1;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    display: none;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+.slides img.active {
+    display: block;
+    opacity: 1;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* Tiled images below slideshow */
+.tiled-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tiled-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tiled-images img:hover {
+    transform: scale(1.05);
+}
+
+.tiled-images img.selected {
+    border: 3px solid #717171;
+}
+
+/* Right-side styles */
+.right-side {
+    flex: 1;
+}
+
+.right-side h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.specifications ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.specifications ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Scroll reveal effects */
+.right-side h1,
+.right-side p,
+.specifications h2,
+.contact-info h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.right-side h1.reveal,
+.right-side p.reveal,
+.specifications h2.reveal,
+.contact-info h2.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .listing-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .tiled-images {
+        justify-content: center;
+    }
+}
