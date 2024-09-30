@@ -46,7 +46,7 @@ function App() {
 
         {/* Default route (redirect to cars-for-sale) */}
         <Route path="/" element={<Navigate to="/cars-for-sale" />} />
-        {/* Route for the luxury car listing page */}
+        {/* Route for the car listing page */}
         <Route path="/listing" element={<CarListing />} />
       </Routes>
     </Router>
