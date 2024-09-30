@@ -6,11 +6,11 @@ export default function CarListing() {
 
     // Replace these URLs with actual car image URLs
     const images = [
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-109-1642184016.jpg?crop=0.647xw:0.548xh;0.116xw,0.313xh&resize=2048:*",
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-102-1642184016.jpg?crop=1xw:1xh;center,top&resize=980:*",
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-101-1642184014.jpg?crop=1xw:1xh;center,top&resize=980:*",
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-103-1642184013.jpg?crop=1xw:1xh;center,top&resize=980:*",
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-104-1642184013.jpg?crop=1xw:1xh;center,top&resize=980:*"
+        "/listing/image1.jpg",
+        "/listing/image2.jpg",
+        "/listing/image3.jpg",
+        "/listing/image4.jpg",
+        "/listing/image5.jpg"
     ];
 
     const nextSlide = () => {
