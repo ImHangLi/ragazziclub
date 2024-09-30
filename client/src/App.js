@@ -1,19 +1,35 @@
-import "./App.css"
-import Header from "./Header"
-import Post from "./Post"
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Header from "./Header";
+import Post from "./Post";
+import CarListing from "./CarListing"; // Import the new CarListing component
 
 function App() {
   return (
-    <main>
+    <Router>
       <Header />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-    </main>
-  )
+      <Routes>
+        {/* Route for the main page (showing posts) */}
+        <Route
+          path="/"
+          element={
+            <main>
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+            </main>
+          }
+        />
+
+        {/* Route for the luxury car listing page */}
+        <Route path="/listing" element={<CarListing />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

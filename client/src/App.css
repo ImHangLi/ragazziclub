@@ -16,7 +16,7 @@ main {
 header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   padding: 40px;
   font-weight: bolder;
   align-items: center;
@@ -38,7 +38,8 @@ header nav {
 
 .post {
   /* border: 0.05px solid rgb(255, 255, 255); */
-  width: 31%; /* Take almost half the width on larger screens */
+  width: 31%;
+  /* Take almost half the width on larger screens */
   margin: 10px;
   display: inline-block;
   vertical-align: top;
@@ -47,7 +48,8 @@ header nav {
 .post .image {
   width: 100%;
   height: 0;
-  padding-top: 66.66%; /* Aspect ratio for the image (16:9) */
+  padding-top: 66.66%;
+  /* Aspect ratio for the image (16:9) */
   position: relative;
 }
 
@@ -57,7 +59,8 @@ header nav {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image fits within the container */
+  object-fit: cover;
+  /* Ensures image fits within the container */
 }
 
 .post .text {
@@ -76,8 +79,10 @@ header nav {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .post {
-    width: 100%; /* Make each post take full width on smaller screens */
-    margin: 10px 0; /* Adjust margin for spacing */
+    width: 100%;
+    /* Make each post take full width on smaller screens */
+    margin: 10px 0;
+    /* Adjust margin for spacing */
   }
 }
 
@@ -87,4 +92,85 @@ header nav {
 
 :hover.readMore {
   text-decoration: underline;
+}
+
+/* Listing Page Styles */
+.listing-page {
+  padding: 20px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.listing-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.listing-header h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: gold;
+}
+
+.listing-header .subheader {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-top: -20px;
+  color: rgb(200, 200, 200);
+}
+
+.slideshow {
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  display: none;
+  object-fit: cover;
+}
+
+.slides img.active {
+  display: block;
+}
+
+.slide-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-nav button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.slide-nav button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.listing-description {
+  padding: 20px;
+  background-color: rgb(25, 25, 25);
+  border-radius: 8px;
+}
+
+.listing-description h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.listing-description p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgb(200, 200, 200);
 }
