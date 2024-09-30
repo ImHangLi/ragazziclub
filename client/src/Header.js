@@ -21,7 +21,7 @@ export default function Header() {
         <Link to="/contact" onClick={toggleDropdown}>Contact Us</Link>
         {/* Up arrow button at the bottom of the menu to close it */}
         <div className="menu-close" onClick={toggleDropdown}>
-          <span className="arrow-up">&#8593;</span>
+          <span className="arrow-up">&#9650;</span>
         </div>
       </nav>
 
