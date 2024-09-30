@@ -19,13 +19,14 @@
 }
 
 .image:hover img {
-    box-shadow: 0px 0px 15px 5px rgba(128, 128, 128, 0.5);
-    /* Grey glow effect */
+    box-shadow: 30px 0px 50px rgba(128, 128, 128, 0.5), -30px 0px 50px rgba(128, 128, 128, 0.5);
+    /* Larger horizontal glow effect from left and right sides */
 }
 
 .arrows {
     position: absolute;
-    top: 50%;
+    bottom: 10px;
+    /* Align to the bottom of the image */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -43,8 +44,16 @@
     color: white;
     background-color: rgba(128, 128, 128, 0.6);
     /* Semi-opaque grey box */
-    padding: 10px;
+    width: 40px;
+    /* Make the box square */
+    height: 40px;
+    /* Make the box square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    user-select: none;
+    /* Prevent text selection */
 }
 
 .text h2 {
@@ -123,7 +132,7 @@
 .popup-content {
     position: relative;
     background: white;
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
     width: 80%;
 }
@@ -147,9 +156,12 @@
 .popup-arrows {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: 100%;
     display: flex;
     justify-content: space-between;
+    pointer-events: auto;
+    /* Allow interaction with arrows */
 }
 
 .popup-arrows .left-arrow,
@@ -157,7 +169,13 @@
     font-size: 2.5rem;
     color: black;
     cursor: pointer;
-    padding: 0 20px;
+    padding: 0 0px;
+    user-select: none;
+    /* Prevent text selection */
+    background: none;
+    /* Remove background box */
+    border: none;
+    /* Remove any border */
 }
 
 .popup-background {

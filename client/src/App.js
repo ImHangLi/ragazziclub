@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 import Header from "./Header";
 import Post from "./Post";
@@ -45,14 +45,7 @@ function App() {
         />
 
         {/* Default route (redirect to cars-for-sale) */}
-        <Route
-          path="/"
-          element={<p>Redirecting...</p>}
-          action={() => {
-            window.location = "/cars-for-sale";
-            return null;
-          }}
-        />
+        <Route path="/" element={<Navigate to="/cars-for-sale" />} />
         {/* Route for the luxury car listing page */}
         <Route path="/listing" element={<CarListing />} />
       </Routes>
