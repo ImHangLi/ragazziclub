@@ -16,7 +16,6 @@ export default function Header() {
       {/* Menu */}
       <nav className={isOpen ? 'nav open' : 'nav'}>
         <Link to="/cars-for-sale" onClick={toggleDropdown}>Cars for Sale</Link>
-        <Link to="/listing" onClick={toggleDropdown}>Example Car Listing</Link>
         <Link to="/research" onClick={toggleDropdown}>Research</Link>
         <Link to="/contact" onClick={toggleDropdown}>Contact Us</Link>
         {/* Up arrow button at the bottom of the menu to close it */}

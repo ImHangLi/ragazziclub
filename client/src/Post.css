@@ -1,0 +1,166 @@
+.post {
+    position: relative;
+    margin: 20px;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out, box-shadow 0.3s ease;
+}
+
+.image:hover img {
+    box-shadow: 0px 0px 15px 5px rgba(128, 128, 128, 0.5);
+    /* Grey glow effect */
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image:hover .arrows {
+    opacity: 1;
+}
+
+.left-arrow,
+.right-arrow {
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.6);
+    /* Semi-opaque grey box */
+    padding: 10px;
+    cursor: pointer;
+}
+
+.text h2 {
+    font-size: 1.5rem;
+}
+
+.titleLink {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.titleLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease;
+}
+
+.titleLink:hover::after {
+    width: 100%;
+}
+
+.readMore {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.readMore::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease;
+}
+
+.readMore:hover::after {
+    width: 100%;
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    /* Ensure it's above everything */
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.popup-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.large-image {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+.popup-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-arrows .left-arrow,
+.popup-arrows .right-arrow {
+    font-size: 2.5rem;
+    color: black;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.popup-background {
+    pointer-events: none;
+    /* Prevent interaction with background */
+}
