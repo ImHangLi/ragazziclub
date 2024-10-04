@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./Header";
 import Post from "./Post";
 import CarListing from "./CarListing"; // Import the new CarListing component
+import Contact from './Contact'; // Import the updated Contact component
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
 
         {/* Route for the luxury car listing page */}
         <Route path="/listing" element={<CarListing />} />
+
+        {/* Route for the contact page */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
