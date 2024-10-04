@@ -4,5 +4,5 @@
 **RAGAZZICLUB** is a website.
 
 ## 2. Setup
-1. ``` cd client && yarn update ```
+1. ``` cd client && yarn upgrade ```
 2. ``` yarn start ```
