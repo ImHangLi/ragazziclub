@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Featured Research Post",
+      "description": "This is the featured research post that appears at the top of the page.",
+      "image": "https://via.placeholder.com/800x400"
+    },
+    {
+      "id": 2,
+      "title": "Research Post 2",
+      "description": "This is a brief description of research post 2.",
+      "image": "https://via.placeholder.com/400x200"
+    },
+    {
+      "id": 3,
+      "title": "Research Post 3",
+      "description": "This is a brief description of research post 3.",
+      "image": "https://via.placeholder.com/400x200"
+    },
+    {
+      "id": 4,
+      "title": "Research Post 4",
+      "description": "This is a brief description of research post 4.",
+      "image": "https://via.placeholder.com/400x200"
+    },
+    {
+      "id": 5,
+      "title": "Research Post 5",
+      "description": "This is a brief description of research post 5.",
+      "image": "https://via.placeholder.com/400x200"
+    },
+    {
+      "id": 6,
+      "title": "Research Post 6",
+      "description": "This is a brief description of research post 6.",
+      "image": "https://via.placeholder.com/400x200"
+    },
+    {
+      "id": 7,
+      "title": "Research Post 7",
+      "description": "This is a brief description of research post 7.",
+      "image": "https://via.placeholder.com/400x200"
+    }
+  ]
+}

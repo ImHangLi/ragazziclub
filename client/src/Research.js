@@ -24,7 +24,7 @@ const Research = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const postsPerPage = 3;
+  const postsPerPage = 6;
 
   useEffect(() => {
     fetch('http://localhost:3001/posts')
