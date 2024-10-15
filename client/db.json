@@ -135,5 +135,87 @@
         "https://static.wixstatic.com/media/6a87ff_cc7242d284634dc1b2b3f8e100335a44~mv2.jpg"
       ]
     }
+  ],
+  "carListings": [
+    {
+      "id": 1,
+      "brand": "Mercedes-Benz",
+      "model": "S-Class",
+      "year": 2024,
+      "price": 110000,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-109-1642184016.jpg?crop=0.647xw:0.548xh;0.116xw,0.313xh&resize=2048:*"
+    },
+    {
+      "id": 2,
+      "brand": "BMW",
+      "model": "7 Series",
+      "year": 2023,
+      "price": 95000,
+      "image": "https://static.wixstatic.com/media/6a87ff_ca7811363aa6497fb5942977cbe6e9c3~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/000009.jpg"
+    },
+    {
+      "id": 3,
+      "brand": "Audi",
+      "model": "A8",
+      "year": 2023,
+      "price": 88000,
+      "image": "https://static.wixstatic.com/media/6a87ff_5ecf4b30097c4a5a9e0d848c75142ab5~mv2.jpg/v1/fill/w_860,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_5587%202.jpg"
+    },
+    {
+      "id": 4,
+      "brand": "Porsche",
+      "model": "Panamera",
+      "year": 2023,
+      "price": 92000,
+      "image": "https://static.wixstatic.com/media/6a87ff_945d79f445574680a0e08314f61efebe~mv2.jpg/v1/fill/w_860,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_5572%202.jpg"
+    },
+    {
+      "id": 5,
+      "brand": "Lexus",
+      "model": "LS",
+      "year": 2023,
+      "price": 78000,
+      "image": "https://static.wixstatic.com/media/6a87ff_cc7242d284634dc1b2b3f8e100335a44~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_1876_edited.jpg"
+    },
+    {
+      "id": 6,
+      "brand": "Mercedes-Benz",
+      "model": "S-Class",
+      "year": 2024,
+      "price": 110000,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-109-1642184016.jpg?crop=0.647xw:0.548xh;0.116xw,0.313xh&resize=2048:*"
+    },
+    {
+      "id": 7,
+      "brand": "BMW",
+      "model": "7 Series",
+      "year": 2023,
+      "price": 95000,
+      "image": "https://static.wixstatic.com/media/6a87ff_ca7811363aa6497fb5942977cbe6e9c3~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/000009.jpg"
+    },
+    {
+      "id": 8,
+      "brand": "Audi",
+      "model": "A8",
+      "year": 2023,
+      "price": 88000,
+      "image": "https://static.wixstatic.com/media/6a87ff_5ecf4b30097c4a5a9e0d848c75142ab5~mv2.jpg/v1/fill/w_860,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_5587%202.jpg"
+    },
+    {
+      "id": 9,
+      "brand": "Porsche",
+      "model": "Panamera",
+      "year": 2023,
+      "price": 92000,
+      "image": "https://static.wixstatic.com/media/6a87ff_945d79f445574680a0e08314f61efebe~mv2.jpg/v1/fill/w_860,h_646,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_5572%202.jpg"
+    },
+    {
+      "id": 10,
+      "brand": "Lexus",
+      "model": "LS",
+      "year": 2023,
+      "price": 78000,
+      "image": "https://static.wixstatic.com/media/6a87ff_cc7242d284634dc1b2b3f8e100335a44~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_1876_edited.jpg"
+    }
   ]
 }

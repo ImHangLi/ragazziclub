@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import "./App.css"
 import Header from "./Header"
 import Post from "./Post"
-import CarListing from "./CarListing" // Import the new CarListing component
-import Contact from "./Contact" // Import the updated Contact component
-import Research from "./Research" // Import the new Research component
-import ResearchDetail from "./ResearchDetail" // Import the new ResearchDetail component
+import CarListing from "./CarListing"
+import Contact from "./Contact"
+import Research from "./Research"
+import ResearchDetail from "./ResearchDetail"
+import CarForSale from "./CarForSale" // Import the new CarForSale component
 
 function App() {
   return (
@@ -39,6 +40,12 @@ function App() {
 
         {/* Route for individual research posts */}
         <Route path="/research/:id" element={<ResearchDetail />} />
+
+        {/* New route for Cars for Sale page */}
+        <Route path="/cars-for-sale" element={<CarForSale />} />
+
+        {/* Route for individual car listings */}
+        <Route path="/listing/:id" element={<CarListing />} />
       </Routes>
     </Router>
   )
