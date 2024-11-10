@@ -7,6 +7,18 @@
     background-color: #000;
     color: #fff;
     font-family: 'Inter', sans-serif;
+    position: fixed;  /* Stays at top */
+    top: -80px;          /* Initially hidden above the viewport */
+    left: 0;
+    width: 100%;
+    transition: top 0.3s ease-in-out; /* Smooth transition */
+    z-index: 100; /* Ensure header is on top of other content */
+    padding: 20px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.header.visible { /* Class to make header visible */
+    top: 0;
 }
 
 .logo {
@@ -32,6 +44,24 @@ nav {
     color: #fff;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+.dropdown-btn::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.dropdown-btn:hover::after,
+.dropdown-btn:active::after {
+    width: 100%;
+    left: 0;
 }
 
 /* Links for desktop view */
@@ -102,6 +132,11 @@ nav a:hover {
     /* Display the hamburger button on mobile */
     .dropdown-btn {
         display: block;
+    }
+
+    .dropdown-btn:focus {
+        outline: 2px solid white; /* Example: white outline */
+        outline-offset: 2px;       /* Offset the outline slightly (optional) */
     }
 
     /* Full screen menu styles for mobile */
