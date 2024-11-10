@@ -2,19 +2,22 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #000;
   color: #fff;
+  font-size: 0.5rem;
 }
 
 h1 {
   text-align: left;
   margin-bottom: 20px;
   color: #fff;
-  font-size: 28px;
+  font-size: 60px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
 }
 
 .filter-section {
@@ -51,22 +54,22 @@ h1 {
 
 .car-card {
   background-color: #111;
-  border-radius: 4px;
   overflow: hidden;
   text-decoration: none;
   color: #fff;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0;
 }
 
 .car-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 72px rgba(255, 255, 255, 0.2);
 }
 
 .car-image-container {
   position: relative;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 75%;
   overflow: hidden;
 }
 
@@ -81,19 +84,29 @@ h1 {
 
 .car-info {
   padding: 15px;
+  height: 60px; /* Reduced height of the text box */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack title and price vertically */
+  justify-content: space-between; /* Distribute space evenly */
+  font-weight: 200;
 }
 
 .car-info h2 {
-  margin: 0 0 5px;
-  font-size: 18px;
-  color: #fff;
-  font-weight: bold;
+  margin: 0; /* Removed margin */
+  font-size: 3em; /* Slightly reduced title font size */
+  color: #f0f0f0; /* Very light gray for title */
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.4); /* subtle text glow */
+  font-weight: 200; /* Lighter font weight */
+  font-family: 'Inter', sans-serif;
 }
 
 .car-price {
-  font-weight: bold;
-  color: #ffffff;
-  font-size: 16px;
+  font-weight: 400; /* Lighter font weight */
+  color: #a0a0a0; /* Light gray for the price */
+  font-size: 2em; /* Slightly smaller price text*/
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2); /* subtle glow */
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
 }
 
 .pagination {
