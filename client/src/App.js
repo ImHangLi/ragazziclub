@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom"
 import "./App.css"
 import Header from "./Header"
 import Post from "./Post"
@@ -45,10 +45,16 @@ function App() {
         <Route path="/cars-for-sale" element={<CarForSale />} />
 
         {/* Route for individual car listings */}
-        <Route path="/listing/:id" element={<CarListing />} />
+        <Route path="/listing/:id" element={<CarListingDetails />} />
       </Routes>
     </Router>
   )
 }
+
+// Wrap CarListing in a component to access route parameters
+const CarListingDetails = () => {
+  const { id } = useParams();
+  return <CarListing carId={id} />;
+};
 
 export default App

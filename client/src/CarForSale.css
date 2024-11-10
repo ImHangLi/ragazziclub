@@ -52,6 +52,13 @@ h1 {
   margin-bottom: 30px;
 }
 
+/* Media query for portrait orientation */
+@media (orientation: portrait) { 
+  .car-grid {
+      grid-template-columns: 1fr; /* One column in portrait */
+  }
+}
+
 .car-card {
   background-color: #111;
   overflow: hidden;
