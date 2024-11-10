@@ -20,9 +20,6 @@ export default function Header() {
         <Link to="/cars-for-sale" onClick={toggleDropdown}>
           Cars for Sale
         </Link>
-        <Link to="/listing" onClick={toggleDropdown}>
-          Example Car Listing
-        </Link>
         <Link to="/research" onClick={toggleDropdown}>
           Research
         </Link>

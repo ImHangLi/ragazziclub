@@ -1,105 +1,165 @@
+// CarListing.js
 import React, { useState, useEffect } from "react";
-import "./CarListing.css"; // Add a new CSS file for specific styles
+import { Link, useNavigate } from 'react-router-dom';
+import "./CarListing.css";
 
-export default function CarListing() {
-    const [activeSlide, setActiveSlide] = useState(0);
+export default function CarListing({ carId }) {
+  const [car, setCar] = useState(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [defaultContact, setDefaultContact] = useState(null); // State for default contact
 
-    // Replace these URLs with actual car image URLs
-    const images = [
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-109-1642184016.jpg?crop=0.647xw:0.548xh;0.116xw,0.313xh&resize=2048:*",
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-102-1642184016.jpg?crop=1xw:1xh;center,top&resize=980:*",
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-101-1642184014.jpg?crop=1xw:1xh;center,top&resize=980:*",
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-103-1642184013.jpg?crop=1xw:1xh;center,top&resize=980:*",
-        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-104-1642184013.jpg?crop=1xw:1xh;center,top&resize=980:*"
-    ];
+  const navigate = useNavigate(); // Initialize useNavigate
 
-    const nextSlide = () => {
-        setActiveSlide((prev) => (prev + 1) % images.length);
-    };
+  const handleGoBack = () => {
+    navigate(-1); // Go back to the previous page
+  };
 
-    const prevSlide = () => {
-        setActiveSlide((prev) => (prev - 1 + images.length) % images.length);
-    };
 
-    const selectSlide = (index) => {
-        setActiveSlide(index);
-    };
 
-    // Reinitialize tiles when returning from another page
-    useEffect(() => {
-        setActiveSlide(0);  // Reset active slide on component mount
-    }, []);
+  useEffect(() => {
+    // Fetch car details
+    fetch(`http://localhost:3001/carListings/${carId}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setCar(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        setLoading(false);
+        console.error("Fetch error for car: ", err);
+      });
 
-    return (
-        <main className="listing-container">
-            <div className="left-side">
-                <div className="slideshow">
-                    <div className="slides">
-                        {images.map((img, index) => (
-                            <img
-                                key={index}
-                                src={img}
-                                alt={`Slide ${index}`}
-                                className={index === activeSlide ? 'active' : ''}
-                            />
-                        ))}
-                    </div>
-                    <div className="dots">
-                        {images.map((_, index) => (
-                            <span
-                                key={index}
-                                className={index === activeSlide ? 'dot active' : 'dot'}
-                                onClick={() => selectSlide(index)}
-                            ></span>
-                        ))}
-                    </div>
-                </div>
 
-                <div className="tiled-images">
-                    {images.map((img, index) => (
-                        <img
-                            key={index}
-                            src={img}
-                            alt={`Tile ${index}`}
-                            onClick={() => selectSlide(index)}
-                            className={index === activeSlide ? 'selected' : ''}
-                        />
-                    ))}
-                </div>
+    // Fetch Default Contact information
+    fetch('http://localhost:3001/default_contact')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok for Default Contact')
+        }
+        return response.json();
+    })
+    .then(defaultContactData => {
+        setDefaultContact(defaultContactData[0]); // Assuming default_contact is an array with one object
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation for Default Contact:', error);
+        // Handle the error, e.g., set an error state
+    });
 
-                {/* Moved specifications to the left-side below images */}
-                <div className="specifications">
-                    <h2>Specifications</h2>
-                    <hr /> {/* Added dividing line below the header */}
-                    <ul>
-                        <li>Engine: 4.0L V8</li>
-                        <li>Power: 496 hp</li>
-                        <li>Transmission: 9-speed automatic</li>
-                        <li>0-60 mph: 3.7 seconds</li>
-                    </ul>
-                </div>
-            </div>
 
-            <div className="right-side">
-                <h1>2024 Mercedes S-Class</h1>
-                <h2>Sydney, Australia</h2>
-                <p className="description">The 2024 Merceds S-Class is a luxury sedan that combines cutting-edge technology with elegant design.
-                    It features a 4.0L V8 engine that produces 496 hp and can accelerate from 0-60 mph in just 3.7 seconds. The interior is
-                    equipped with the latest MBUX infotainment system and a 12.8-inch OLED touchscreen display. The S-Class also offers
-                    advanced safety features such as adaptive cruise control and lane-keeping
-                    assist.
-                </p>
-                <p className="description">
-                    The 2024 Mercedes S-Class is available in a range of colors and trims to suit your style. Contact us today to schedule a test drive!
-                </p>
-                <p className="description2">Starting at $110,000</p>
+  }, [carId]);
 
-                <div className="contact-info">
-                    <h2>Contact Us</h2>
-                    <p><span role="img" aria-label="phone">📞</span> +1 (800) 123-4567</p>
-                    <p><span role="img" aria-label="email">✉️</span> contact@RAGAZZICLUB.com</p>
-                </div>
-            </div>
-        </main>
-    );
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  if (!car) return <div>Car not found.</div>;
+  if (!defaultContact) return <div>Loading Default Contacts...</div>  //If Default contact is not loaded yet
+
+
+  const images = car.images || [];
+
+  const nextSlide = () => {
+    setActiveSlide((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setActiveSlide((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const selectSlide = (index) => {
+    setActiveSlide(index);
+  };
+
+  const contact = car.alt_contact || defaultContact || {};  //Now corrected to use defaultContact
+
+
+  return (
+    <main className="listing-container">
+      <div className="left-side">
+        <div className="slideshow">
+          <div className="slides">
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Slide ${index}`}
+                className={index === activeSlide ? "active" : ""}
+                style={{display: index === activeSlide ? 'block' : 'none'}} // Fix for slideshow
+              />
+            ))}
+          </div>
+          <div className="slide-nav"> {/* Add navigation buttons */}
+                <button onClick={prevSlide} disabled={images.length <= 1}>❮</button>
+                <button onClick={nextSlide} disabled={images.length <= 1}>❯</button>
+          </div>
+          <div className="dots">
+            {images.map((_, index) => (
+              <span
+                key={index}
+                className={index === activeSlide ? "dot active" : "dot"}
+                onClick={() => selectSlide(index)}
+              ></span>
+            ))}
+          </div>
+        </div>
+
+
+        <div className="tiled-images">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Tile ${index}`}
+              onClick={() => selectSlide(index)}
+              className={index === activeSlide ? "selected" : ""}
+            />
+          ))}
+        </div>
+
+        <div className="specifications">
+          <h2>Specifications</h2>
+          <hr />
+          <ul>
+            {car.specifications &&
+              Object.entries(car.specifications).map(([key, value]) => (
+                <li key={key}>
+                  {key}: {value}
+                </li>
+              ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="right-side">
+      <button className="back-button" onClick={handleGoBack}>
+          ← Back to Listings{" "}
+        </button>
+      <h1>
+          {car.year} {car.brand} {car.model}
+        </h1>
+        <h2>{car.location}</h2>
+        <p className="description">{car.description}</p>
+
+        <p className="description2">Starting at ${car.price.toLocaleString()}</p>
+
+        <div className="contact-info">
+          <h2>Contact {contact.name}</h2>
+
+          <div className="contact-details"> {/* Added wrapper for better styling */}
+            <img src={contact.photo} alt={contact.name} className="contact-photo" />
+            {contact.phone && <p><span role="img" aria-label="phone">📞</span> {contact.phone}</p>} {/* Conditional rendering & phone icon */}
+            {contact.email && <p><span role="img" aria-label="email">✉️</span> {contact.email}</p>} {/* Conditional rendering & email icon */}
+          </div>
+
+        </div>
+      </div>
+    </main>
+  );
 }
