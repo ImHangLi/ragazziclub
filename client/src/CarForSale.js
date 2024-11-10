@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './CarForSale.css';
 
-const CarCard = ({ id, brand, model, year, price, image }) => (
+const CarCard = ({ id, brand, model, year, price, image, location }) => (
   <Link to={`/listing/${id}`} className="car-card">
     <div className="car-image-container">
       <img src={image} alt={`${brand} ${model}`} className="car-image" />
     </div>
     <div className="car-info">
       <h2>{`${year} ${brand} ${model}`}</h2>
-      <p className="car-price">${price.toLocaleString()}</p>
+      <p className="car-location">{location}</p>
     </div>
   </Link>
 );
