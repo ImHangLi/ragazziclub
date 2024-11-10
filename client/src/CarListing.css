@@ -198,20 +198,14 @@ body {
     .card {
         margin-bottom: 20px;
     }
-
-    .tiled-image { /* Style for the small tiled images */
-        width: 100px;
-        height: 100px;
-        object-fit: cover; /* Ensure image covers the circular area */
-      }
       
-      .contact-photo {
-          width: 50px; /* Adjust size as needed */
-          height: 50px;
-          border-radius: 50%; /* Make it circular */
-          object-fit: cover; /* To ensure the image fills the circle nicely */
-          margin-bottom: 1em; /* Space below image */
-      }      
+    .contact-photo {
+      width: 50px; /* Adjust size as needed */
+      height: 50px;
+      border-radius: 50%; /* Make it circular */
+      object-fit: cover; /* To ensure the image fills the circle nicely */
+      margin-bottom: 1em; /* Space below image */
+    }      
 }
 
 .back-button {

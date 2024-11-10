@@ -51,3 +51,39 @@ h1 {
   font-size: 18px;
   line-height: 1.6;
 }
+
+/* Add styles for the back button */
+.back-button {
+  padding: 10px 20px;
+  background-color: transparent; /* Or a color of your choice */
+  color: white;  /* Or another suitable color */
+  border: 1px solid transparent; /* Transparent border initially */
+  border-radius: 0px; /* Rounded corners (optional) */
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 20px; /* Add some space below the button */
+  align-self: flex-start; /* Align to left */
+  position: relative; /* For underline effect */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+
+.back-button::after {  /* Underline effect similar to header */
+    content: "";
+    position: absolute;
+    bottom: -2px;  /* Adjust to fine-tune underline position */
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white; /* Underline color */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth animation */
+}
+
+.back-button:hover::after, .back-button:focus::after {
+    width: 100%;
+    left: 0;
+}
+
+.back-button:hover {
+    border-color: white; /* Border on hover */
+}
