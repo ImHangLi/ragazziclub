@@ -13,6 +13,15 @@
         "https://static.wixstatic.com/media/6a87ff_ca7811363aa6497fb5942977cbe6e9c3~mv2.jpg",
         "https://static.wixstatic.com/media/6a87ff_cc7242d284634dc1b2b3f8e100335a44~mv2.jpg",
         "https://static.wixstatic.com/media/6a87ff_003e3ba524634aeab9b1279a9f519dd4~mv2.jpg"
+      ],
+      "alt_contact": [
+        {
+          "id": 1,
+          "name": "Luke Okita",
+          "email": "contact@RAGAZZICLUB.com",
+          "phone": "+1 (800) 123-4567",
+          "photo": "https://cdn.shopify.com/s/files/1/0068/0394/7579/files/DoiFarm10_large.png?v=1567543284"
+        }
       ]
     },
     {
@@ -141,9 +150,24 @@
       "id": 1,
       "brand": "Mercedes-Benz",
       "model": "S-Class",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-109-1642184016.jpg?crop=0.647xw:0.548xh;0.116xw,0.313xh&resize=2048:*",
       "year": 2024,
       "price": 110000,
-      "image": "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-109-1642184016.jpg?crop=0.647xw:0.548xh;0.116xw,0.313xh&resize=2048:*"
+      "location": "Los Angeles, CA",
+      "description": "The 2024 Merceds S-Class is a luxury sedan that combines cutting-edge technology with elegant design. It features a 4.0L V8 engine that produces 496 hp and can accelerate from 0-60 mph in just 3.7 seconds. The interior is equipped with the latest MBUX infotainment system and a 12.8-inch OLED touchscreen display. The S-Class also offers advanced safety features such as adaptive cruise control and lane-keeping assist.",
+      "images": [
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-109-1642184016.jpg?crop=0.647xw:0.548xh;0.116xw,0.313xh&resize=2048:*",
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-102-1642184016.jpg?crop=1xw:1xh;center,top&resize=980:*",
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-101-1642184014.jpg?crop=1xw:1xh;center,top&resize=980:*",
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-103-1642184013.jpg?crop=1xw:1xh;center,top&resize=980:*",
+        "https://hips.hearstapps.com/hmg-prod/images/2022-mercedes-benz-s500-4matic-104-1642184013.jpg?crop=1xw:1xh;center,top&resize=980:*"
+      ],
+      "specifications": {
+        "Engine": "4.0L V8",
+        "Power": "496 hp",
+        "Transmission": "9-speed automatic",
+        "0-60 mph": "3.7 seconds"
+      }
     },
     {
       "id": 2,
@@ -216,6 +240,15 @@
       "year": 2023,
       "price": 78000,
       "image": "https://static.wixstatic.com/media/6a87ff_cc7242d284634dc1b2b3f8e100335a44~mv2.jpg/v1/fill/w_890,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_1876_edited.jpg"
+    }
+  ],
+  "default_contact": [
+    {
+      "id": 1,
+      "name": "Luke Okita",
+      "email": "contact@RAGAZZICLUB.com",
+      "phone": "+1 (800) 123-4567",
+      "photo": "https://cdn.shopify.com/s/files/1/0068/0394/7579/files/DoiFarm10_large.png?v=1567543284"
     }
   ]
 }
